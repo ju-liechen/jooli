@@ -1,6 +1,6 @@
 import 'styles/index.scss'
 import { Layouts } from 'layouts'
-import { ThemeProvider } from '../contexts/ThemeContext'
+import { ThemeProvider } from 'contexts/ThemeContext'
 
 function MyApp({ Component, pageProps }) {
   return (

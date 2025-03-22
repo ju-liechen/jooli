@@ -1,4 +1,4 @@
-@import '../styles/variables.scss';
+@use 'styles/variables' as vars;
 
 .main-container {
   position: relative;
@@ -12,8 +12,8 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   
   // Default is dark mode
-  background-color: $black;
-  color: $white;
+  background-color: vars.$black;
+  color: vars.$white;
   
   main {
     flex: 1;
@@ -50,8 +50,8 @@
 }
 
 .light {
-  background-color: $white;
-  color: $gray-600;
+  background-color: vars.$white;
+  color: vars.$gray-600;
   
   .header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -65,8 +65,8 @@
 }
 
 .dark {
-  background-color: $black;
-  color: $white;
+  background-color: vars.$black;
+  color: vars.$white;
   
   .header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
