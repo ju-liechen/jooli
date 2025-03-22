@@ -1,8 +1,8 @@
 function Home() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div>
       <h1>Hello from Home Page</h1>
-      <p>Welcome!</p>
+      <p>Welcome! This is the home page.</p>
     </div>
   );
 }
