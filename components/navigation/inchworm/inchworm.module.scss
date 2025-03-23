@@ -1,0 +1,55 @@
+@use './variables' as vars;
+
+.inchworm {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  margin: 0 20px;
+  animation: crawl 200s infinite linear;
+}
+
+.body {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: vars.$success-green;
+  animation: scrunch 2s infinite ease-in-out;
+}
+
+@keyframes crawl {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scrunch {
+  0% {
+    box-shadow:
+      6px 0 0 0 vars.$success-green,
+      12px 0 0 0 vars.$success-green,
+      18px 0 0 0 vars.$success-green,
+      24px 0 0 0 vars.$error-red;
+    transform: translateY(0) translateX(0px);
+  }
+
+  50% {
+    box-shadow:
+      4px -2px 0 0 vars.$success-green,
+      8px -4px 0 0 vars.$success-green,
+      12px -2px 0 0 vars.$success-green,
+      16px 0px 0 0 vars.$error-red;
+    transform: translateY(-2px) translateX(7px);
+  }
+
+  100% {
+    box-shadow:
+      6px 0 0 0 vars.$success-green,
+      12px 0 0 0 vars.$success-green,
+      18px 0 0 0 vars.$success-green,
+      24px 0 0 0 vars.$error-red;
+    transform: translateY(0) translateX(0px);
+  }
+}
