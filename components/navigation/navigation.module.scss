@@ -6,9 +6,16 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  overflow: hidden; /* Keep the inchworm within bounds */
-  padding-bottom: 20px;
+  overflow: hidden;
+  padding: 20px;
   margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  @media #{vars.$phone-tablet} {
+    padding-block: 0px;
+  }
 
   .inchworm-container {
     display: flex;

@@ -8,11 +8,20 @@
   padding: 0;
 }
 
+/* Add safe area inset for mobile devices */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
 html, 
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -37,9 +46,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: vars.$blue;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
   
   &:hover {
     color: vars.$blue-dark;
-    text-decoration: underline;
   }
 }

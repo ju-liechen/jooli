@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import { Inchworm } from './inchworm'
 import styles from './navigation.module.scss'
 
 export const Navigation = ({ toggleTheme, isDarkMode }) => {
   return (
     <div className={styles['nav-wrapper']}>
-      <h1>jooli</h1>
+      <Link href='/'><h1>jooli</h1></Link>
       <div className={styles['inchworm-container']}>
         <Inchworm />
       </div>

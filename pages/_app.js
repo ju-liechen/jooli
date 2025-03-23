@@ -5,7 +5,12 @@ import { ThemeProvider } from 'contexts/ThemeContext'
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider>
-      <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ 
+        height: '100%', 
+        display: 'flex', 
+        flexDirection: 'column',
+        overflowY: 'auto' 
+      }}>
         <Layouts layouts={Component.Layouts || []} pageProps={pageProps}>
           <Component {...pageProps} />
         </Layouts>

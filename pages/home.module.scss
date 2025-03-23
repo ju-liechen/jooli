@@ -1,0 +1,79 @@
+@use './variables' as vars;
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  overflow-y: auto;
+  
+  .block-dark, .block-light {
+    position: absolute;
+    width: 48%;
+    height: 50%;
+    left: 0;
+    z-index: 1;
+
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .block-dark {
+    background-color: vars.$gray-600;
+  }
+
+  .block-light { 
+    background-color: vars.$gray-100;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100%;
+    padding-top: 100px;
+
+    z-index: 2;
+
+    @media #{vars.$phone-tablet} {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      height: 500px;
+
+      @media #{vars.$phone-tablet} {
+        height: auto;
+      }
+
+      &-content {
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &-heading {
+          font-size: 78px;
+        }
+      }
+
+      &-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+
+        margin-top: auto;
+      }
+    }
+  }
+}
